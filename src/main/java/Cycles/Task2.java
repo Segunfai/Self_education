@@ -12,11 +12,11 @@ public class Task2 {
         ArrayList<Integer> numSum = new ArrayList<>();
 
         System.out.println("Введите числа для сложения (0 для завершения): ");
-        int i = 0;
-        int num = input.nextInt();
+        int num;
+        int sum = 0;
 
-        try {
-            while (true) {
+        while (true) {
+            try {
                 num = input.nextInt();
 
                 if (num == 0) {
@@ -26,14 +26,15 @@ public class Task2 {
                     continue;
                 }
                 numSum.add(num);
-
-
+            } catch (InputMismatchException e) {
+                System.out.println("Вы ввели не число!");
+                input.next();
             }
-        } catch (InputMismatchException e) {
-            System.out.println("Вы ввели не число!");
-            input.next();
         }
 
-        System.out.println(numSum);
+        for (int i : numSum) sum += i;
+
+        System.out.println("Массив введенных чисел: " + numSum);
+        System.out.println("Сумма введенных чисел: " + sum);
     }
 }
