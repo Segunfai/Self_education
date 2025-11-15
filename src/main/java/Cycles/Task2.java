@@ -16,9 +16,18 @@ public class Task2 {
         int num = input.nextInt();
 
         try {
-            while (num != 0) {
+            while (true) {
                 num = input.nextInt();
+
+                if (num == 0) {
+                    break;
+                } else if (num < 0) {
+                    System.out.println("Вы ввели отрицательное число!");
+                    continue;
+                }
                 numSum.add(num);
+
+
             }
         } catch (InputMismatchException e) {
             System.out.println("Вы ввели не число!");
