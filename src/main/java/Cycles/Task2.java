@@ -1,5 +1,13 @@
 package Cycles;
 
+/*
+2. Сумма положительных чисел
+Условие:
+Пользователь вводит числа по одному с клавиатуры.
+Программа суммирует только положительные числа.
+Ввод прекращается, когда пользователь вводит 0.
+ */
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
