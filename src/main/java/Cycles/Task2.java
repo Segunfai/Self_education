@@ -22,26 +22,30 @@ public class Task2 {
         int num;
         int sum = 0;
 
+
         while (true) {
             try {
                 num = input.nextInt();
 
                 if (num == 0) {
                     break;
-                } else if (num < 0) {
-                    System.out.println("Вы ввели отрицательное число!");
-                    continue;
                 }
+
                 numSum.add(num);
+
             } catch (InputMismatchException e) {
                 System.out.println("Вы ввели не число!");
                 input.next();
             }
         }
 
-        for (int i : numSum) sum += i;
+        for (int i : numSum) {
+            if (i > 0) {
+                sum += i;
+            }
+        }
 
         System.out.println("Массив введенных чисел: " + numSum);
-        System.out.println("Сумма введенных чисел: " + sum);
+        System.out.println("Сумма положительных чисел: " + sum);
     }
 }
