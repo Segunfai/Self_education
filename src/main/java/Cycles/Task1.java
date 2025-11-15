@@ -74,8 +74,9 @@ public class Task1 {
         Scanner input = new Scanner(System.in);
 
         //Вводим количество студентов в группе и их ФИО
-        int studNum = 0;
+        int studNum;
 
+        //Выполняй цикл до тех пор, пока не введут положительное число
         do {
             try {
                 System.out.print("Введите количество студентов в группе: ");
@@ -92,14 +93,16 @@ public class Task1 {
                 input.next();
             }
         } while (true);
+        //Очистка буфера
 
         input.nextLine();
 
+        //Инициализация массива ФИО
         String[] fio = new String[studNum];
 
         int i = 0;
 
-
+        //Пока массив фио не заполнен вводи ФИО
         while (i < studNum) {
             System.out.print("Введите Фамилию и имя студента: ");
             fio[i] = input.nextLine();
@@ -167,6 +170,7 @@ public class Task1 {
         System.out.println("Лучший студент: " + fio[bestStudIndex] + " (" + rating[bestStudIndex] + ")");
     }
 
+    //Отдельный метод для задания критериев оценки
     private static String getGrade(int[] rating, int i) {
         String a = "Отлично";
         String b = "Хорошо";
