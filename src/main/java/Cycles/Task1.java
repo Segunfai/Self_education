@@ -157,21 +157,7 @@ public class Task1 {
         for (i = 0; i < studNum; i++) {
             try {
                 //Задаем критерии оценок
-                String a = "Отлично";
-                String b = "Хорошо";
-                String c = "Удовлетворительно";
-                String d = "Неудовлетворительно";
-                String grade;
-
-                if (rating[i] >= 1 && rating[i] <= 4) {
-                    grade = d;
-                } else if (rating[i] >= 5 && rating[i] <= 6 ) {
-                    grade = c;
-                } else if (rating[i] >= 7 && rating[i] <= 8) {
-                    grade = b;
-                } else {
-                    grade = a;
-                }
+                String grade = getGrade(rating, i);
                 System.out.println(fio[i] + ": " + rating[i] + " (" + grade + ")");
             } catch (IndexOutOfBoundsException er) {
                 System.out.println(fio[i] + " Оценка не указана");
@@ -179,5 +165,24 @@ public class Task1 {
         }
         System.out.println("\nСредний балл группы: " + avg + " балла");
         System.out.println("Лучший студент: " + fio[bestStudIndex] + " (" + rating[bestStudIndex] + ")");
+    }
+
+    private static String getGrade(int[] rating, int i) {
+        String a = "Отлично";
+        String b = "Хорошо";
+        String c = "Удовлетворительно";
+        String d = "Неудовлетворительно";
+        String grade;
+
+        if (rating[i] >= 1 && rating[i] <= 4) {
+            grade = d;
+        } else if (rating[i] >= 5 && rating[i] <= 6 ) {
+            grade = c;
+        } else if (rating[i] >= 7 && rating[i] <= 8) {
+            grade = b;
+        } else {
+            grade = a;
+        }
+        return grade;
     }
 }
