@@ -14,15 +14,17 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
+        //Создание пустого массива из чисел
         ArrayList<Integer> numSum = new ArrayList<>();
 
         System.out.println("Введите числа для сложения (0 для завершения): ");
         int num;
         int sum = 0;
 
-
+        //Пока num != 0 выполняй цикл
         while (true) {
             try {
                 num = input.nextInt();
@@ -31,6 +33,7 @@ public class Task2 {
                     break;
                 }
 
+                //Добавление введенного значения в массив
                 numSum.add(num);
 
             } catch (InputMismatchException e) {
@@ -39,6 +42,7 @@ public class Task2 {
             }
         }
 
+        //Суммирование только положительных чисел
         for (int i : numSum) {
             if (i > 0) {
                 sum += i;
