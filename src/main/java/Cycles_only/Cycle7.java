@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Выведите первые N чисел последовательности Фибоначчи
+ */
+
 import java.util.Scanner;
 
 public class Cycle7 {

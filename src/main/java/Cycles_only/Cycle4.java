@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Выведите числа от N до 1 в обратном порядке, пропуская четные числа.
+ */
+
 import java.util.Scanner;
 
 public class Cycle4 {

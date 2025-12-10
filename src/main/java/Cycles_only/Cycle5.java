@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Найдите все делители числа M и выведите их.
+ */
+
 import java.util.Scanner;
 
 public class Cycle5 {

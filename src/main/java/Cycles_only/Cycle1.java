@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Напишите программу, которая выводит все числа от 1 до N (N вводится с клавиатуры).
+ */
+
 import java.util.Scanner;
 
 public class Cycle1 {

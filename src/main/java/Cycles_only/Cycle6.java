@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Выведите все простые числа в диапазоне от A до B.
+ */
+
 import java.util.Scanner;
 
 public class Cycle6 {

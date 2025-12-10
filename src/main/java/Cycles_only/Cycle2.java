@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Напишите программу, которая вычисляет сумму всех чисел от 1 до N.
+ */
+
 import java.util.Scanner;
 
 public class Cycle2 {

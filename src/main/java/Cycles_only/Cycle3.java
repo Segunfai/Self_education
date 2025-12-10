@@ -1,5 +1,9 @@
 package Cycles_only;
 
+/*
+Выведите таблицу умножения для числа K (K вводится с клавиатуры).
+ */
+
 import java.util.Scanner;
 
 public class Cycle3 {
