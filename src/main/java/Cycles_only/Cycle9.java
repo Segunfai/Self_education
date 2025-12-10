@@ -23,26 +23,17 @@ public class Cycle9 {
         int count = 0;
         int s = 0;
         int avg = 0;
-        int min = Integer.MIN_VALUE;
-        int max = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
 
         do {
-            System.out.print("Введите число: ");
+            System.out.print("Введите число (0 для завершения: ");
             num = input.nextInt();
 
             if (num !=0) {
                 count++;
-            }
+                s += num;
 
-            s += num;
-
-
-            if (num != 0 && count == 1) {
-                min = num;
-                max = num;
-            }
-
-            if (num != 0) {
                 if (num < min) {
                     min = num;
                 }
