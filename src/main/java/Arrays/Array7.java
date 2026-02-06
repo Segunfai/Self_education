@@ -66,28 +66,28 @@ public class Array7 {
             }
         }
 
-//        if (foundIndex != -1) {
-//            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
-//        } else {
-//            System.out.println("Число " + inputId + " не найдено в массиве!");
-//        }
+        if (foundIndex != -1) {
+            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
+        } else {
+            System.out.println("Число " + inputId + " не найдено в массиве!");
+        }
 
-//        String inds = "";
-//
-//        for (int i =0; i < summArray.length; i++) {
-//            if (summArray[i] == inputId) {
-//                inds = inds + i + ", ";
-//            }
-//        }
-//
-//        if (inds.isEmpty()) {
-//            System.out.println("Число " + inputId + " не найдено в массиве!");
-//        } else {
-//            inds = inds.substring(0, inds.length() - 2);
-//            System.out.println("Число " + inputId + " найдено на позициях " + inds);
-//        }
-//
-//        input.close();
+        String inds = "";
+
+        for (int i =0; i < summArray.length; i++) {
+            if (summArray[i] == inputId) {
+                inds = inds + i + ", ";
+            }
+        }
+
+        if (inds.isEmpty()) {
+            System.out.println("Число " + inputId + " не найдено в массиве!");
+        } else {
+            inds = inds.substring(0, inds.length() - 2);
+            System.out.println("Число " + inputId + " найдено на позициях " + inds);
+        }
+
+        input.close();
 
 //        StringBuilder inds = new StringBuilder();
 //
@@ -104,22 +104,22 @@ public class Array7 {
 //
 //        input.close();
 
-        StringBuilder inds = new StringBuilder();
-
-        for (int i = 0; i < summArray.length; i++) {
-            if (summArray[i] == inputId) {
-                if (!inds.isEmpty()) {  // если уже что-то есть
-                    inds.append(", ");       // добавляем запятую ПЕРЕД следующим индексом
-                }
-                inds.append(i);              // добавляем индекс
-            }
-        }
-
-        if (inds.isEmpty()) {
-            System.out.println("Число " + inputId + " не найдено в массиве!");
-        } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
-
-        input.close();
+//        StringBuilder inds = new StringBuilder();
+//
+//        for (int i = 0; i < summArray.length; i++) {
+//            if (summArray[i] == inputId) {
+//                if (!inds.isEmpty()) {  // если уже что-то есть
+//                    inds.append(", ");       // добавляем запятую ПЕРЕД следующим индексом
+//                }
+//                inds.append(i);              // добавляем индекс
+//            }
+//        }
+//
+//        if (inds.isEmpty()) {
+//            System.out.println("Число " + inputId + " не найдено в массиве!");
+//        } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
+//
+//        input.close();
 
     }
 }
