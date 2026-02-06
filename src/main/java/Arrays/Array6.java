@@ -1,3 +1,14 @@
+/*
+Задание 6: Среднее арифметическое
+Вычислите среднее арифметическое всех элементов массива.
+
+Пример:
+
+text
+Массив: 10 20 30 40
+Среднее: 25.0
+ */
+
 package Arrays;
 
 import java.util.Scanner;
@@ -31,9 +42,11 @@ public class Array6 {
             sum += j;
         }
 
-        int avg = sum / summArray.length;
+        double avg = (double) sum / summArray.length;
 
         System.out.println("Среднее арифметическое: " + avg);
+
+        input.close();
 
     }
 }
