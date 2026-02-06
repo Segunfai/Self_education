@@ -15,6 +15,8 @@ text
 
 package Arrays;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Array7 {
@@ -64,18 +66,24 @@ public class Array7 {
             }
         }
 
-        if (foundIndex != -1) {
-            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
-        } else {
+//        if (foundIndex != -1) {
+//            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
+//        } else {
+//            System.out.println("Число " + inputId + " не найдено в массиве!");
+//        }
+
+        String inds = "";
+
+        for (int i =0; i < summArray.length; i++) {
+            if (summArray[i] == inputId) {
+                inds = inds + i + ", ";
+            }
+
+        }
+
+        if (inds.isEmpty()) {
             System.out.println("Число " + inputId + " не найдено в массиве!");
-        }
-
-        int count = 0;
-
-        if (foundIndex > 1) {
-            count++;
-            System.out.println("Число повторяется в массиве " + count);
-        }
+        } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
 
         input.close();
 
