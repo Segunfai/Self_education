@@ -1,0 +1,57 @@
+/*
+Задание 7: Поиск элемента
+Проверьте, содержится ли число X в массиве.
+
+Пример:
+
+text
+Массив: 1 2 3 4 5
+Введите число для поиска: 3
+Число 3 найдено в массиве!
+ */
+
+package Arrays;
+
+import java.util.Scanner;
+
+public class Array7 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Введите размер массива: ");
+        int size = input.nextInt();
+        int[] summArray = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            System.out.print("Введите элемент " + (i + 1) + ": ");
+            summArray[i] = input.nextInt();
+        }
+
+        System.out.print("Массив: ");
+        for (int i = 0; i < summArray.length; i++) {
+            if (i < summArray.length - 1) {
+                System.out.print(summArray[i] + ", ");
+            } else {
+                System.out.println(summArray[i]);
+            }
+        }
+
+        System.out.print("Введите число для поиска: ");
+        int inputId = input.nextInt();
+
+        boolean valExist = false;
+
+        for (int id : summArray) {
+            if (inputId == id) {
+                valExist = true;
+                break;
+            }
+        }
+
+        if (valExist) {
+            System.out.println("Число " + inputId + " найдено в массиве!");
+        } else System.out.println("Число " + inputId + " не найдено в массиве!");
+
+    }
+}
