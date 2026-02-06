@@ -81,6 +81,13 @@ public class Array7 {
 
         }
 
+        for (int i =0; i < summArray.length; i++) {
+            if (summArray[i] == inputId) {
+                inds = inds + i + ", ";
+            }
+
+        }
+
         if (inds.isEmpty()) {
             System.out.println("Число " + inputId + " не найдено в массиве!");
         } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
