@@ -72,23 +72,23 @@ public class Array7 {
 //            System.out.println("Число " + inputId + " не найдено в массиве!");
 //        }
 
-        String inds = "";
+        StringBuilder inds = new StringBuilder();
+
+//        for (int i =0; i < summArray.length; i++) {
+//            if (summArray[i] == inputId) {
+//                inds = inds + i + ", ";
+//            }
+//
+//        }
 
         for (int i =0; i < summArray.length; i++) {
             if (summArray[i] == inputId) {
-                inds = inds + i + ", ";
+                inds.append(i).append(", ");
             }
 
         }
 
-        for (int i =0; i < summArray.length; i++) {
-            if (summArray[i] == inputId) {
-                inds = inds + i + ", ";
-            }
-
-        }
-
-        if (inds.isEmpty()) {
+        if (inds.length() == 0) {
             System.out.println("Число " + inputId + " не найдено в массиве!");
         } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
 
