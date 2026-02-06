@@ -8,6 +8,9 @@ text
 Массив: 1 2 3 4 5
 Введите число для поиска: 3
 Число 3 найдено в массиве!
+
+Мини-задание: Модифицируй программу так, чтобы она выводила все индексы,
+где встречается искомое число (если число встречается несколько раз)
  */
 
 package Arrays;
@@ -42,16 +45,39 @@ public class Array7 {
 
         boolean valExist = false;
 
-        for (int id : summArray) {
-            if (inputId == id) {
-                valExist = true;
-                break;
+//        for (int id : summArray) {
+//            if (inputId == id) {
+//                valExist = true;
+//                break;
+//            }
+//        }
+//
+//        if (valExist) {
+//            System.out.println("Число " + inputId + " найдено в массиве!");
+//        } else System.out.println("Число " + inputId + " не найдено в массиве!");
+
+        int foundIndex = -1; // -1 означает "не найдено"
+        for (int i = 0; i < summArray.length; i++) {
+            if (summArray[i] == inputId) {
+                foundIndex = i;
+//                break;
             }
         }
 
-        if (valExist) {
-            System.out.println("Число " + inputId + " найдено в массиве!");
-        } else System.out.println("Число " + inputId + " не найдено в массиве!");
+        if (foundIndex != -1) {
+            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
+        } else {
+            System.out.println("Число " + inputId + " не найдено в массиве!");
+        }
+
+        int count = 0;
+
+        if (foundIndex > 1) {
+            count++;
+            System.out.println("Число повторяется в массиве " + count);
+        }
+
+        input.close();
 
     }
 }
