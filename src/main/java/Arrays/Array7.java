@@ -88,7 +88,7 @@ public class Array7 {
 
         }
 
-        if (inds.isEmpty()) {
+        if (inds.length() == 0) {
             System.out.println("Число " + inputId + " не найдено в массиве!");
         } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
 
