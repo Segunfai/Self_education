@@ -8,6 +8,8 @@ text
 Массив: 1 2 3 4 5 6
 Четных: 3
 Нечетных: 3
+
+Мини-задание: Подсчитай процент четных и нечетных чисел в массиве
  */
 
 package Arrays;
@@ -38,6 +40,7 @@ public class Array9 {
 
         int countChet = 0;
         int countNechet = 0;
+        double total = summArray.length;
 
         for (int j : summArray) {
             if (j % 2 == 0) {
@@ -55,7 +58,12 @@ public class Array9 {
 //            }
 //        }
 
-        System.out.println("Четных: " + countChet);
-        System.out.println("Нечетных: " + countNechet);
+        double prcChet = (countChet / total) * 100;
+        double prcNechet = (countNechet / total) * 100;
+
+        System.out.println("Четных: " + countChet + " (" + prcChet + "%)");
+        System.out.println("Нечетных: " + countNechet + " (" + prcNechet + "%)");
+
+        input.close();
     }
 }
