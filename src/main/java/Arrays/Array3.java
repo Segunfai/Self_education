@@ -13,7 +13,7 @@ package Arrays;
 
 import java.util.Scanner;
 
-public class Arrays3 {
+public class Array3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

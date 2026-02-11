@@ -58,25 +58,27 @@ public class Array7 {
 //            System.out.println("Число " + inputId + " найдено в массиве!");
 //        } else System.out.println("Число " + inputId + " не найдено в массиве!");
 
-        int foundIndex = -1; // -1 означает "не найдено"
-        for (int i = 0; i < summArray.length; i++) {
-            if (summArray[i] == inputId) {
-                foundIndex = i;
+//        int foundIndex = -1; // -1 означает "не найдено"
+//        for (int i = 0; i < summArray.length; i++) {
+//            if (summArray[i] == inputId) {
+//                foundIndex = i;
 //                break;
-            }
-        }
-
-        if (foundIndex != -1) {
-            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
-        } else {
-            System.out.println("Число " + inputId + " не найдено в массиве!");
-        }
+//            }
+//        }
+//
+//        if (foundIndex != -1) {
+//            System.out.println("Число " + inputId + " найдено на позиции " + foundIndex);
+//        } else {
+//            System.out.println("Число " + inputId + " не найдено в массиве!");
+//        }
 
         String inds = "";
+        int count = 0;
 
         for (int i =0; i < summArray.length; i++) {
             if (summArray[i] == inputId) {
                 inds = inds + i + ", ";
+                count++;
             }
         }
 
@@ -84,7 +86,7 @@ public class Array7 {
             System.out.println("Число " + inputId + " не найдено в массиве!");
         } else {
             inds = inds.substring(0, inds.length() - 2);
-            System.out.println("Число " + inputId + " найдено на позициях " + inds);
+            System.out.println("Число " + "\""+ inputId + "\"" + " встречается " + count + " раз(а) и найдено на позициях " + inds);
         }
 
         input.close();
