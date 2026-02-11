@@ -117,6 +117,14 @@ public class Array7 {
 //            }
 //        }
 //
+//        for (int i = 0; i < summArray.length; i++) {
+//            if (summArray[i] == inputId) {
+//                if (!inds.isEmpty()) {  // если уже что-то есть
+//                    inds += ", ";       // добавляем запятую ПЕРЕД следующим индексом
+//                }
+//                inds += i;              // добавляем индекс
+//            }
+//        }
 //        if (inds.isEmpty()) {
 //            System.out.println("Число " + inputId + " не найдено в массиве!");
 //        } else System.out.println("Число " + inputId + " найдено на позициях " + inds);
