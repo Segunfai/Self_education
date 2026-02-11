@@ -39,6 +39,13 @@ public class Array8 {
             System.out.print(summArray[i] + " ");
         }
 
+//        Альтернатива от нейронки
+//        int i = summArray.length - 1;
+//        while (i >= 0) {
+//            System.out.print(summArray[i] + " ");
+//            i--;
+//        }
+
         input.close();
     }
 }
