@@ -39,13 +39,22 @@ public class Array9 {
         int countChet = 0;
         int countNechet = 0;
 
-        for (int i = 0; i < summArray.length; i++) {
-            if (summArray[i] % 2 == 0) {
+        for (int j : summArray) {
+            if (j % 2 == 0) {
                 countChet++;
             } else {
                 countNechet++;
             }
         }
+
+//        for (int i = 0; i < summArray.length; i++) {
+//            if (summArray[i] % 2 == 0) {
+//                countChet++;
+//            } else {
+//                countNechet++;
+//            }
+//        }
+
         System.out.println("Четных: " + countChet);
         System.out.println("Нечетных: " + countNechet);
     }
