@@ -43,10 +43,18 @@ public class Array10 {
             System.out.print(arrayCopy[i] + " ");
         }
 
-//        System.out.print("Копия массива: ");
-//        for (int j : summArray) {
-//            System.out.print(j + " ");
+//        Альтернатива - ручное копирование
+//        int[] arrayCopy = new int[summArray.length];
+//        for (int i = 0; i < summArray.length; i++) {
+//            arrayCopy[i] = summArray[i];
 //        }
+
+        //Клонирование
+        //int[] arrayCopy = summArray.clone();
+
+        //Проверка, что массивы являются разными объектами:
+        System.out.println(summArray == arrayCopy);  // false - разные объекты!
+        System.out.println(Arrays.equals(summArray, arrayCopy));  // true - одинаковое содержание
 
         input.close();
     }
