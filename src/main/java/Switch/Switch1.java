@@ -32,15 +32,18 @@ public class Switch1 {
 
         Scanner input = new Scanner(System.in);
 
+
         for (int i = 0; i < 5; i++) {
-            System.out.print("Введите элемент " + (i+1) + ": ");
-            scores [i] = input.nextInt();
+            do {
+                System.out.print("Введите элемент " + (i+1) + ": ");
+                scores [i] = input.nextInt();
 
-            if(scores [i] > 5 || scores[i] < 1) {
-                System.out.println("Введите число от 1 до 5!");
-            }
+                if(scores [i] < 1 || scores[i] > 5) {
+                    System.out.println("Введите число от 1 до 5!");
+                }
+            } while (scores [i] < 1 || scores[i] > 5);
         }
-
+        System.out.println();
 
         System.out.print("Массив оценок: ");
         for (int i = 0; i < scores.length; i++) {
@@ -51,5 +54,16 @@ public class Switch1 {
             }
         }
 
+        System.out.print("Результат: ");
+        for (int grade : scores) {
+            switch (grade) {
+                case 1 -> System.out.print("Плохо ");
+                case 2 -> System.out.print("Неудовлетворительно ");
+                case 3 -> System.out.print("Удовлетворительно ");
+                case 4 -> System.out.print("Хорошо ");
+                case 5 -> System.out.print("Отлично ");
+            }
+        }
+        input.close();
     }
 }
