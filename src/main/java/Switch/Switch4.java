@@ -52,21 +52,10 @@ public class Switch4 {
         System.out.print("Результат: ");
         for (int choose : nums) {
             switch (choose) {
-                case 1:
-                case 2:
-                case 3:
-                    System.out.print("Маленькое ");
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                    System.out.print("Среднее ");
-                case 8:
-                case 9:
-                case 10:
-                    System.out.print("Большое ");
-                default:
-                    System.out.print("Вне диапазона ");
+                case 1, 2, 3 -> System.out.print("Маленькое ");
+                case 4, 5, 6, 7 -> System.out.print("Среднее ");
+                case 8, 9, 10 -> System.out.print("Большое ");
+                default -> System.out.print("Вне диапазона ");
             }
         }
         input.close();
