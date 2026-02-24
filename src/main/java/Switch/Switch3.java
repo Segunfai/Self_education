@@ -25,10 +25,10 @@ public class Switch3 {
         int arrSize = input.nextInt();
         int[] nums = new int[arrSize];
 
-        for (int i = 0; i < nums.length; i++) {
-            Random b = new Random();
+        Random b = new Random();
 
-            nums[i] = b.nextInt(6) + 1;
+        for (int i = 0; i < nums.length; i++) {
+            nums[i] = b.nextInt(7) + 1;
         }
 
         System.out.print("Числа: ");
@@ -40,5 +40,18 @@ public class Switch3 {
             }
         }
 
+        System.out.print("Дни: ");
+        for (int days : nums) {
+            switch (days) {
+                case 1 -> System.out.print("Понедельник ");
+                case 2 -> System.out.print("Вторник ");
+                case 3 -> System.out.print("Среда ");
+                case 4 -> System.out.print("Четверг ");
+                case 5 -> System.out.print("Пятница ");
+                case 6 -> System.out.print("Суббота ");
+                case 7 -> System.out.print("Воскресенье ");
+            }
+        }
+        input.close();
     }
 }
