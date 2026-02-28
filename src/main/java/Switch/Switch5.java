@@ -70,7 +70,7 @@ public class Switch5 {
                             nums = new int[arrSize];
 
                             for (int i = 0; i < nums.length; i++) {
-                                nums[i] = rand.nextInt(nums.length) + 1;
+                                nums[i] = rand.nextInt(100) + 1;
                             }
 
                             System.out.print("Массив: ");
