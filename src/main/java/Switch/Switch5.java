@@ -43,85 +43,92 @@ public class Switch5 {
         int arrSize = 5;
         int[] nums = new int[arrSize];
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = rand.nextInt(nums.length) + 1;
-        };
+            nums[i] = rand.nextInt(100);
+        }
 
-        int choose;
+        int choose = 0;
 
-        do {
-            System.out.println("===МЕНЮ===");
-            System.out.println("1. Ввести новый массив");
-            System.out.println("2. Сумма элементов");
-            System.out.println("3. Среднее арифметическое");
-            System.out.println("4. Максимальный элемент");
-            System.out.println("5. Выход");
+            do {
+                System.out.println("===МЕНЮ===");
+                System.out.println("1. Ввести новый массив");
+                System.out.println("2. Сумма элементов");
+                System.out.println("3. Среднее арифметическое");
+                System.out.println("4. Максимальный элемент");
+                System.out.println("5. Выход");
 
-            System.out.print("Выберите пункт: ");
-            choose = input.nextInt();
+                System.out.print("Выберите пункт: ");
 
-            switch (choose) {
+                if (input.hasNextInt()) {
 
-                case 1: {
-                    System.out.print("Введите размер массива: ");
-                    arrSize = input.nextInt();
-                    nums = new int[arrSize];
+                    choose = input.nextInt();
 
-                    for (int i = 0; i < nums.length; i++) {
-                        nums[i] = rand.nextInt(nums.length) + 1;
-                    };
+                    switch (choose) {
 
-                    System.out.print("Массив: ");
-                    for (int i = 0; i < nums.length; i++) {
-                        if (i < nums.length - 1) {
-                            System.out.print(nums[i] + " ");
-                        } else {
-                            System.out.println(nums[i]);
+                        case 1: {
+                            System.out.print("Введите размер массива: ");
+                            arrSize = input.nextInt();
+                            nums = new int[arrSize];
+
+                            for (int i = 0; i < nums.length; i++) {
+                                nums[i] = rand.nextInt(nums.length) + 1;
+                            }
+
+                            System.out.print("Массив: ");
+                            for (int i = 0; i < nums.length; i++) {
+                                if (i < nums.length - 1) {
+                                    System.out.print(nums[i] + " ");
+                                } else {
+                                    System.out.println(nums[i]);
+                                }
+                            }
+                            System.out.println("\n");
+                        }
+                        break;
+                        case 2: {
+                            int sum = 0;
+                            for (int i : nums) {
+                                sum += i;
+                            }
+                            System.out.print("Сумма: " + sum + "\n");
+                        }
+                        break;
+
+                        case 3: {
+                            int sum = 0;
+
+                            for (int i : nums) {
+                                sum += i;
+                            }
+                            int avg = sum / nums.length;
+
+                            System.out.print("Среднее арифметическое: " + avg + "\n");
+                        }
+                        break;
+
+                        case 4: {
+                            int max = nums[0];
+                            for (int i : nums) {
+                                if (i > max) {
+                                    max = i;
+                                }
+                            }
+                            System.out.print("Максимальный элемент: " + max + "\n");
+                        }
+                        break;
+
+                        case 5: {
+                            System.out.println("Спасибо за использование меню!\nДо свидания!");
+                        }
+
+                        default: {
+                            System.out.println("Введено число вне диапазона!\n");
                         }
                     }
-
-                    System.out.println("\n");
+                } else {
+                    System.out.println("Введено не число!\n");
+                    input.next();
                 }
-                break;
-                case 2: {
-                    int sum = 0;
-                    for (int i : nums) {
-                        sum+= i;
-                    }
-                    System.out.print("Сумма: " + sum);
-                    System.out.println("\n");
-                }
-                break;
-
-                case 3: {
-                    int avg = 0;
-                    int sum = 0;
-
-                    for (int i : nums) {
-                        sum+= i;
-                    }
-
-                    for (int i : nums) {
-                        avg = sum / nums.length;
-                    }
-                    System.out.print("Среднее арифметическое: " + avg);
-                    System.out.println("\n");
-                }
-                break;
-
-                case 4: {
-                    int max = nums[0];
-                    for (int i : nums) {
-                        if (i > max) {
-                            max = i;
-                        }
-                    }
-                    System.out.print("Максимальный элемент: " + max);
-                    System.out.println("\n");
-                }
-                break;
-            }
-        } while (choose >= 1 && choose < 5);
-
-        System.out.println("Введено число вне меню! До свидания!");
+            } while (choose != 5);
+        input.close();
     }
 }
