@@ -12,7 +12,7 @@
 - В сеттере для возраста добавьте проверку (возраст > 0)
  */
 
-package ClassesObjectsMethods1.task1;
+package ClassesObjectsMethods.task1;
 
 class Student {
 

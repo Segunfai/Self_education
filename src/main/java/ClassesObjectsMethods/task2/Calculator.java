@@ -15,7 +15,7 @@
 В main продемонстрируйте работу всех методов.
  */
 
-package ClassesObjectsMethods1.task2;
+package ClassesObjectsMethods.task2;
 
 public class Calculator {
 
