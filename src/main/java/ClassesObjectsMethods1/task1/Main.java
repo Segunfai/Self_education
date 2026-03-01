@@ -22,7 +22,7 @@ text
 
  */
 
-package ClassesObjectsMethods1;
+package ClassesObjectsMethods1.task1;
 
 public class Main {
     public static void main(String[] args) {

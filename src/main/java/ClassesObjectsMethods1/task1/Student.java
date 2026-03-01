@@ -1,4 +1,4 @@
-package ClassesObjectsMethods1;
+package ClassesObjectsMethods1.task1;
 
 class Student {
 
