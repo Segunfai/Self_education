@@ -18,7 +18,5 @@ public class Main {
         Calculator.multiply(a, b);
 
         Calculator.divide(a, b);
-
-        input.close();
     }
 }
