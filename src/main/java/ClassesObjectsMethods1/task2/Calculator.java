@@ -19,41 +19,28 @@ package ClassesObjectsMethods1.task2;
 
 public class Calculator {
 
-   private static int a;
-   private static int b;
+   private int a;
+   private int b;
 
-    public Calculator(int a, int b) {
-        this.a = a;
-        this.b = b;
-    }
-
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public void setB(int b) {
-        this.b = b;
-    }
-
-    static void add() {
+    public static void add(int a, int b) {
         int sum = a + b;
         System.out.print("Сумма: " + sum + "\n");
     }
 
-     static void subtract () {
+    public static void subtract (int a, int b) {
         int sbtrct = a - b;
         System.out.print("Разность: " + sbtrct + "\n");
     }
 
-    static void multiply () {
+    public static void multiply (int a, int b) {
         int mlt = a * b;
         System.out.print("Произведение: " + mlt + "\n");
     }
 
-    static void divide () {
-        int dvde = a / b;
-        System.out.print("Частное: " + dvde + "\n");
+    public static void divide (int a, int b) {
+        if (b != 0) {
+            int dvde = a / b;
+            System.out.print("Частное: " + dvde + "\n");
+        } else System.out.print("Деление на ноль!");
     }
-
 }

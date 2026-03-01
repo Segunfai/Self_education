@@ -6,17 +6,19 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        System.out.print("Введите значения чисел a и b: ");
 
-        Calculator one = new Calculator(input.nextInt(), input.nextInt());
+        System.out.println("Введите значения чисел a и b: ");
+        int a = input.nextInt();
+        int b = input.nextInt();
 
-        one.add();
+        Calculator.add(a, b);
 
-        one.subtract();
+        Calculator.subtract(a, b);
 
-        one.multiply();
+        Calculator.multiply(a, b);
 
-        one.divide();
+        Calculator.divide(a, b);
 
+        input.close();
     }
 }
