@@ -19,9 +19,6 @@ package ClassesObjectsMethods1.task2;
 
 public class Calculator {
 
-   private int a;
-   private int b;
-
     public static void add(int a, int b) {
         int sum = a + b;
         System.out.print("Сумма: " + sum + "\n");
