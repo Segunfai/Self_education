@@ -11,8 +11,6 @@ import java.util.Scanner;
 
 public class Student {
 
-    Student[] student = new Student[3];
-
     Scanner input = new Scanner(System.in);
 
     private String name;
