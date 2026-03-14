@@ -23,7 +23,11 @@
 
 package ClassesObjectsMethods.task7;
 
+import java.util.Scanner;
+
 public class BankAccount {
+
+    Scanner vvod = new Scanner(System.in);
 
     private int accountNumber;
     private String ownerName;
@@ -33,6 +37,10 @@ public class BankAccount {
         this.accountNumber = accountNumber;
         this.ownerName = ownerName;
         this.balance = balance;
+    }
+
+    void deposit(double amount) {
+        balance += amount;
     }
 
     void displayBalance() {

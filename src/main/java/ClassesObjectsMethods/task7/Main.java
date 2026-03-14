@@ -17,10 +17,20 @@ public class Main {
         String owner = input.nextLine();
         System.out.print("Введите баланс по счету: ");
         double money = input.nextDouble();
+        System.out.print("\n");
 
         BankAccount one = new BankAccount(acc, owner, money);
 
         one.displayBalance();
+        double dep;
+        do {
+            System.out.print("Введите сумму для пополнения баланса: ");
+            dep = input.nextDouble();
+        } while (dep <= 0);
 
+        one.deposit(dep);
+        System.out.println("\n");
+
+        one.displayBalance();
     }
 }
