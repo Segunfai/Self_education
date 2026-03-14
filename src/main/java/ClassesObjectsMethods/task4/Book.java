@@ -22,7 +22,7 @@
 
  */
 
-package ClassesObjectsMethods.task3;
+package ClassesObjectsMethods.task4;
 
 public class Book {
 

@@ -5,13 +5,11 @@
 
  */
 
-package ClassesObjectsMethods.task4;
+package ClassesObjectsMethods.task5;
 
 import java.util.Scanner;
 
 public class Student {
-
-    Scanner input = new Scanner(System.in);
 
     private String name;
     private int age;
