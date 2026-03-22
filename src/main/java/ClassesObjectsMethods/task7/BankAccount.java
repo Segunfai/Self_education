@@ -23,8 +23,6 @@
 
 package ClassesObjectsMethods.task7;
 
-import java.util.Scanner;
-
 public class BankAccount {
 
     private int accountNumber;
@@ -55,6 +53,17 @@ public class BankAccount {
             return true;
         } else {
             System.out.println("Сумма для вывода больше баланса! Введите другую сумму");
+            return false;
+        }
+    }
+
+    boolean transfer(double amount, int targetAccount) {
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println(amount + " переведено на счет " + targetAccount);
+            return true;
+        } else {
+            System.out.println("Сумма для перевода превышает баланс! Введите другую сумму");
             return false;
         }
     }
