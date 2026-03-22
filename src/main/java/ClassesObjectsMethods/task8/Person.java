@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Person {
 
-    private String name;
-    private int age;
-    private String address;
+    private static String name;
+    private static int age;
+    private static Address address;
 
-    public Person(String name, int age, String address) {
+    public Person(String name, int age, Address address) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -20,14 +20,14 @@ public class Person {
         System.out.print("Адрес: " + address);
     }
 
-    public void main() {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите имя: ");
         name = input.nextLine();
-        System.out.print("Введите возраст");
+        System.out.print("Введите возраст: ");
         age = input.nextInt();
         System.out.print("Введите адрес в формате \"Название города, название улицы, номер дома\": ");
-        address = new Address(input.nextLine(), input.nextLine(), input.nextInt()).toString();
+        address =(input.nextLine(), input.nextLine(), input.nextInt()).toString();
 
         Person first = new Person(name, age, address);
 
