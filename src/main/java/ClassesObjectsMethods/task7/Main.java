@@ -21,7 +21,6 @@ public class Main {
 
         BankAccount one = new BankAccount(acc, owner, money);
 
-        BankAccount two = new BankAccount(5055, "Григорий", 0);
 
         one.displayBalance();
         double dep;
@@ -55,7 +54,8 @@ public class Main {
         one.displayBalance();
 
         double transferMoney;
-        int transferAccount;
+        int transferAccount = 0;
+        BankAccount two = new BankAccount(transferAccount, "Григорий", 0);
         boolean perevod = false;
         do {
             do {
@@ -77,8 +77,6 @@ public class Main {
             if (one.transfer(transferMoney, transferAccount)) {
                 two.deposit(transferMoney);
                 perevod = true;
-            } else {
-                perevod = false;
             }
         } while (!perevod);
 
