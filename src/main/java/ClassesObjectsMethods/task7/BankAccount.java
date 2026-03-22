@@ -27,8 +27,6 @@ import java.util.Scanner;
 
 public class BankAccount {
 
-    Scanner vvod = new Scanner(System.in);
-
     private int accountNumber;
     private String ownerName;
     private double balance;
@@ -41,11 +39,23 @@ public class BankAccount {
 
     void deposit(double amount) {
         balance += amount;
+        System.out.println("Баланс пополнен на " + amount);
     }
 
     void displayBalance() {
         System.out.print("Имя: " + ownerName + "\n");
         System.out.print("Номер счета: " + accountNumber + "\n");
         System.out.println("Баланс: " + balance + "\n");
+    }
+
+    boolean withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println("С баланса снято " + amount);
+            return true;
+        } else {
+            System.out.println("Сумма для вывода больше баланса! Введите другую сумму");
+            return false;
+        }
     }
 }

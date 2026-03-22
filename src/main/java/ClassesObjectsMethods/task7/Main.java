@@ -26,10 +26,30 @@ public class Main {
         do {
             System.out.print("Введите сумму для пополнения баланса: ");
             dep = input.nextDouble();
+            if(dep <= 0) {
+                System.out.println("Сумма пополнения должна быть положительной!");
+            }
         } while (dep <= 0);
 
         one.deposit(dep);
         System.out.println("\n");
+
+        one.displayBalance();
+
+        double minus;
+        boolean vyvod = false;
+        do {
+            do {
+                System.out.print("Введите сумму для вывода: ");
+                minus = input.nextDouble();
+                if (minus <= 0) {
+                    System.out.println("Сумма сняти должна быть положительной!");
+                }
+            } while (minus <= 0);
+
+            vyvod = one.withdraw(minus);
+            System.out.println("\n");
+        } while (!vyvod);
 
         one.displayBalance();
     }
