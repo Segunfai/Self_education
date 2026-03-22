@@ -38,7 +38,7 @@ public class Main {
         one.displayBalance();
 
         double minus;
-        boolean vyvod = false;
+        boolean vyvod;
         do {
             do {
                 System.out.print("Введите сумму для вывода: ");
