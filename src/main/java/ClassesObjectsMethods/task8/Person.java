@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Person {
 
-    private static String name;
-    private static int age;
-    private static Address address;
+    private String name;
+    private int age;
+    private Address address;
 
     public Person(String name, int age, Address address) {
         this.name = name;
@@ -26,9 +26,13 @@ public class Person {
         name = input.nextLine();
         System.out.print("Введите возраст: ");
         age = input.nextInt();
-        System.out.print("Введите адрес в формате \"Название города, название улицы, номер дома\": ");
-        address =(input.nextLine(), input.nextLine(), input.nextInt()).toString();
-
+        System.out.print("Введите название города: ");
+        String city = input.nextLine();
+        System.out.print("Введите название улицы: ");
+        String street = input.nextLine();
+        System.out.print("Введите номер дома: ");
+        int houseNumber = input.nextInt();
+        address = (city + ", " + street + ", д." + houseNumber).toString();
         Person first = new Person(name, age, address);
 
         first.displayInfo();
