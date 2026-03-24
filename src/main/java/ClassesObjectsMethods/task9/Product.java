@@ -51,8 +51,14 @@ public class Product {
         System.out.println("Запас товара" + name + " пополнен на " + amount + " шт.");
     }
 
-    void getTotalValue() {
-        double total = price * quantity;
-        System.out.println("На складе осталось " + quantity + " шт. товара \"" + name + "\", общая стоимость: " + total + "руб.");
+    boolean getTotalValue() {
+        if (quantity > 0) {
+            double total = price * quantity;
+            System.out.println("На складе осталось " + quantity + " шт. товара \"" + name + "\", общая стоимость: " + total + "руб.");
+            return true;
+        } else {
+            System.out.println("Товара " + name + " не осталось на складе");
+            return false;
+        }
     }
 }

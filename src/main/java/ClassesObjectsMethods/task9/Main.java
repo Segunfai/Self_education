@@ -1,11 +1,13 @@
 package ClassesObjectsMethods.task9;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
+        input.useLocale(Locale.US);
 
         Product[] products = new Product[3];
 
@@ -14,7 +16,6 @@ public class Main {
             String name = input.nextLine();
             System.out.print("Введите цену продукта: ");
             double price = input.nextDouble();
-            input.nextLine();
             System.out.print("Введите количество продукта на складе: ");
             int quantity = input.nextInt();
             input.nextLine();
@@ -29,12 +30,15 @@ public class Main {
             System.out.print("Введите количество товаров для покупки: ");
             amount = input.nextInt();
             if(amount <= 0) {
-                System.out.println("Сумма пополнения должна быть положительной!");
+                System.out.println("Количество товаров должно быть положительным!");
             }
         } while (amount <= 0);
 
-        products[0].sell(amount);
+        for (int i = 0; i <= products.length; i++) {
+            products[i].sell(amount);
 
-        products[0].getTotalValue();
+            products[i].getTotalValue();
+        }
+
     }
 }
