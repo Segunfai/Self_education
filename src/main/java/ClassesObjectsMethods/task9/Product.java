@@ -35,14 +35,20 @@ public class Product {
         this.quantity = quantity;
     }
 
-    boolean sell (int amount) {
+    public String getName() {
+        return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    void sell (int amount) {
         if (quantity >= amount && quantity > 0) {
             quantity -= amount;
             System.out.println("Куплен товар " + name + " в количестве " + amount + " шт.");
-            return true;
         } else {
             System.out.println("Товара нет в наличии");
-            return false;
         }
     }
 
@@ -51,14 +57,12 @@ public class Product {
         System.out.println("Запас товара" + name + " пополнен на " + amount + " шт.");
     }
 
-    boolean getTotalValue() {
+    void getTotalValue() {
         if (quantity > 0) {
             double total = price * quantity;
             System.out.println("На складе осталось " + quantity + " шт. товара \"" + name + "\", общая стоимость: " + total + "руб.");
-            return true;
         } else {
             System.out.println("Товара " + name + " не осталось на складе");
-            return false;
         }
     }
 }

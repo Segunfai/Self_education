@@ -26,19 +26,22 @@ public class Main {
 
 
         int amount;
-        do {
-            System.out.print("Введите количество товаров для покупки: ");
-            amount = input.nextInt();
-            if(amount <= 0) {
-                System.out.println("Количество товаров должно быть положительным!");
-            }
-        } while (amount <= 0);
 
-        for (int i = 0; i <= products.length; i++) {
-            products[i].sell(amount);
+        for (Product product : products) {
+            do {
+                System.out.print("Введите количество товара \"" + product.getName() + "\" для покупки: ");
+                amount = input.nextInt();
+                input.nextLine();
+                if (amount <= 0) {
+                    System.out.println("Количество товаров должно быть положительным!");
+                } else if (amount > product.getQuantity()) {
+                    System.out.println("Нельзя купить более " + product.getQuantity() + " шт.");
+                }
+            } while (amount <= 0 || amount > product.getQuantity());
 
-            products[i].getTotalValue();
+            product.sell(amount);
+
+            product.getTotalValue();
         }
-
     }
 }
