@@ -20,21 +20,27 @@ public class Person {
         System.out.print("Адрес: " + address);
     }
 
+
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Введите имя: ");
-        name = input.nextLine();
+        String name = input.nextLine();
         System.out.print("Введите возраст: ");
-        age = input.nextInt();
+        int age = input.nextInt();
+        input.nextLine();
         System.out.print("Введите название города: ");
         String city = input.nextLine();
         System.out.print("Введите название улицы: ");
-        String street = input.nextLine();
+        String street = input.nextLine();;
         System.out.print("Введите номер дома: ");
         int houseNumber = input.nextInt();
-        address = (city + ", " + street + ", д." + houseNumber).toString();
+        Address address = new Address(city, street, houseNumber);
+
         Person first = new Person(name, age, address);
 
         first.displayInfo();
+
+        input.close();
     }
 }
