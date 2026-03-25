@@ -7,9 +7,8 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        int vvod;
         System.out.print("Введите начальное значение счетчика: ");
-        vvod = input.nextInt();
+        int vvod = input.nextInt();
 
         Counter first = new Counter(vvod);
 
@@ -17,16 +16,48 @@ public class Main {
 
         Counter third = new Counter(vvod);
 
-        System.out.println("Демонстрация метода increment");
+        System.out.print("Общее количество созданных объектов: " + Counter.getTotalCounters() + "\n");
+
+        System.out.println("Демонстрация работы методов для первого счетчика");
         first.increment();
-        System.out.println("Демонстрация метода decrement");
+        first.increment();
+        first.increment();
+        first.increment();
+        first.increment();
+        first.increment();
+        first.increment();
+        first.decrement();
+        first.decrement();
+        first.decrement();
+        first.getValue();
+        System.out.println("\n");
+        System.out.println("Демонстрация работы методов для второго счетчика");
+        second.increment();
+        second.increment();
         second.decrement();
-        System.out.println("Демонстрация метода getValue");
+        second.getValue();
+        System.out.println("\n");
+        System.out.println("Демонстрация работы методов для третьего счетчика");
+        third.increment();
+        third.increment();
+        third.increment();
+        third.increment();
+        third.decrement();
+        third.decrement();
+        third.decrement();
+        third.decrement();
+        third.decrement();
         third.getValue();
-        System.out.println("Сбрасываем значение счетчика до нуля");
+        System.out.println("\n");
+        System.out.println("Сбрасываем значения счетчиков до нуля");
         first.reset();
+        first.getValue();
+        System.out.println("\n");
         second.reset();
+        second.getValue();
+        System.out.println("\n");
         third.reset();
+        third.getValue();
 
     }
 }

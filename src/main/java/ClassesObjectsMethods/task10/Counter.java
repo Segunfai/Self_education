@@ -25,21 +25,27 @@ public class Counter {
 
     public Counter(int count) {
         this.count = count;
+        totalCounters++;
     }
 
     void increment() {
-        totalCounters = count++;
+        count++;
     }
 
     void decrement() {
-        totalCounters = count--;
+        count--;
     }
 
     void getValue() {
-        System.out.print("Текущее значение счетчика: " + totalCounters);;
+        System.out.print("Текущее значение счетчика: " + count);;
     }
 
-    int reset() {
-        return count = 0;
+    void reset() {
+        count = 0;
+        System.out.print("Значение счетчика обнулено\n");
+    }
+
+    public static int getTotalCounters() {
+        return totalCounters;
     }
 }
