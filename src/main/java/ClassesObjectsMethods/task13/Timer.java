@@ -28,26 +28,58 @@ public class Timer {
     }
     public int addSeconds(int sec) {
         sec += seconds;
-        if(seconds >= 60) {
+        if(seconds == 60) {
+            minutes = minutes + 1;
+            seconds = seconds / 60;
+        }
+        if (seconds > 60) {
+            minutes += seconds / 60;
             seconds = seconds % 60;
-            minutes = seconds / 60;
+        }
+        if (minutes == 60) {
+            hours = hours + 1;
+            minutes = 0;
+        }
+        if (minutes > 60) {
+            hours = hours + (minutes / 60);
+            minutes = minutes % 60;
+        }
+        if (hours == 24) {
+            hours = 0;
+        }
+        if (hours > 24) {
+            hours = hours % 24;
         }
         return sec;
     }
 
     public int addMinutes(int min) {
         min += minutes;
-        if (minutes < 10) {
-        }
-        if (minutes >= 60) {
+        if (minutes == 60) {
+            hours = hours + 1;
             minutes = 0;
-            hours = minutes / 60;
+        }
+        if (minutes > 60) {
+            hours = hours + (minutes / 60);
+            minutes = minutes % 60;
+        }
+        if (hours == 24) {
+            hours = 0;
+        }
+        if (hours > 24) {
+            hours = hours % 24;
         }
         return min;
     }
 
     public int addHours(int hour) {
         hour += hours;
+        if (hours == 24) {
+            hours = 0;
+        }
+        if (hours > 24) {
+            hours = hours % 24;
+        }
         return hour;
     }
 
