@@ -27,21 +27,32 @@ public class Timer {
         this.seconds = seconds;
     }
     public int addSeconds(int sec) {
-        seconds = sec;
+        sec += seconds;
+        if(seconds >= 60) {
+            seconds = seconds % 60;
+            minutes = seconds / 60;
+        }
         return sec;
     }
 
     public int addMinutes(int min) {
-        minutes = min;
+        min += minutes;
+        if (minutes < 10) {
+        }
+        if (minutes >= 60) {
+            minutes = 0;
+            hours = minutes / 60;
+        }
         return min;
     }
 
     public int addHours(int hour) {
-        hours = hour;
+        hour += hours;
         return hour;
     }
 
     public void displayTime() {
-        System.out.println(hours + ":" + minutes + ":" + seconds);
+        String timestring = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+        System.out.println(timestring);
     }
 }

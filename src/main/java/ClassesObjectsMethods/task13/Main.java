@@ -11,9 +11,15 @@ public class Main {
         int hours = input.nextInt();
         System.out.print("Введите минуты: ");
         int minutes = input.nextInt();
-        System.out.println("Введите секунды: ");
+        System.out.print("Введите секунды: ");
         int seconds = input.nextInt();
 
+        Timer time = new Timer(hours, minutes, seconds);
+
+        time.addHours(hours);
+        time.addMinutes(minutes);
+        time.addSeconds(seconds);
+        time.displayTime();
 
     }
 }
