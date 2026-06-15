@@ -35,6 +35,7 @@ public class Book {
         this.title = title;
         this.author = author;
         this.year = year;
+        this.isAvailable = true;
     }
 
     public String getTitle() {
@@ -72,8 +73,8 @@ public class Book {
     public void borrow() {
         if (isAvailable) {
             isAvailable = false;
-            System.out.println("Вы взяли книгу");
-        } else System.out.println("Книга недоступна");
+            System.out.println("Вы взяли книгу \"" + title + "\"");
+        } else System.out.println("Книга \"" + title + "\" недоступна");
     }
 
     public void returnBook () {
@@ -86,9 +87,9 @@ public class Book {
     public void displayInfo () {
         System.out.print("Информация о книге: \n" + "Название: " + title + "\n");
         System.out.print("Автор: " + author + "\n" + "Год выпуска: " + year + "\n");
-        if (isAvailable) {
-            System.out.println("Книга доступна");
-        } else System.out.println("Книга недоступна");
+//        if (isAvailable) {
+//            System.out.println("Книга доступна");
+//        } else System.out.println("Книга недоступна");
     }
 
 }
