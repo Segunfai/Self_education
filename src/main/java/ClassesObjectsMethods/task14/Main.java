@@ -6,13 +6,13 @@ public class Main {
     public static void main(String[] args) {
         Library coollection = new Library(5);
 
-        Book masterIMargo = new Book("Мастер и Маргарита", "Булгаков", 1940, true);
-        Book women = new Book("Женщины", "Буковски", 1978, true);
-        Book skazki = new Book("Сказки", "Народ", 1987, true);
-        Book lotr = new Book("Lord of The Rings", "Tolkien", 1954, true);
-        Book kolobok = new Book("Колобок", "Народ", 1873, true);
-        Book testing = new Book("Тестировщик", "Тест", 2026, true);
-        Book focus = new Book("Фокусы", "Тестер", 2015, false);
+        Book masterIMargo = new Book("Мастер и Маргарита", "Булгаков", 1940);
+        Book women = new Book("Женщины", "Буковски", 1978);
+        Book skazki = new Book("Сказки", "Народ", 1987);
+        Book lotr = new Book("Lord of The Rings", "Tolkien", 1954);
+        Book kolobok = new Book("Колобок", "Народ", 1873);
+        Book testing = new Book("Тестировщик", "Тест", 2026);
+        Book focus = new Book("Фокусы", "Тестер", 2015);
 
         coollection.adBook(masterIMargo);
         coollection.adBook(women);

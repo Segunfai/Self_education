@@ -31,7 +31,7 @@ public class Book {
     private int year;
     private boolean isAvailable;
 
-    public Book(String title, String author, int year, boolean isAvailable) {
+    public Book(String title, String author, int year) {
         this.title = title;
         this.author = author;
         this.year = year;
