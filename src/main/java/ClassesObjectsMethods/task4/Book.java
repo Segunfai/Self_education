@@ -35,7 +35,6 @@ public class Book {
         this.title = title;
         this.author = author;
         this.year = year;
-        this.isAvailable = true;
     }
 
     public String getTitle() {
