@@ -48,23 +48,24 @@ public class Matrix {
     }
 
     public Matrix multiply(Matrix other) {
-        double[][] result = new double[data.length][data[0].length];
-        double[][] result1 = new double[data.length][data[0].length];
-        double[][] result2 = new double[result.length][result1[0].length];
-        if (data.length != other.data.length || data[0].length != other.data[0].length) {
+        double[][] result = new double[data.length][other.data[0].length];
+        if (data[0].length != other.data.length) {
             System.out.println("Матрицы разных размеров! Умножение невозможно.");
             return new Matrix(data); // или вернуть null
         } else {
-            for (int i = 0; i < result2[0].length; i++) {
-                for(int j = 0; j < result2.length; j++) {
-                    for(int k = 0; k < result[0].length; k++) {
-                        result[i][j] += result[i][k] * result1[k][j];
-                        other = result[i][j];
+            for (int i = 0; i < data.length; i++) {
+                for(int j = 0; j < other.data[0].length; j++) {
+                    for(int k = 0; k < data[0].length; k++) {
+                        result[i][j] += data[i][k] * other.data[k][j];
                     }
                 }
             }
         }
-        return other;
+        return new Matrix(result);
+    }
+
+    public void determinant() {
+
     }
 
 }
