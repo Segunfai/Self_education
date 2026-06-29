@@ -22,8 +22,6 @@
 
 package ClassesObjectsMethods.task15;
 
-import com.sun.source.tree.BreakTree;
-
 public class Matrix {
 
     private double[][] data;
@@ -106,9 +104,9 @@ public class Matrix {
     }
 
     public void print() {
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 0; j < data[i].length; j++) {
-                System.out.print(data[i][j] + " ");
+        for (double[] datum : data) {
+            for (double v : datum) {
+                System.out.print(v + " ");
             }
             System.out.println();  // переход на новую строку
         }
